@@ -13,6 +13,21 @@ public class CoinChange {
     }
 
     static void coinChange(Integer[] faces, int money) {
+        // 默认从小到大排
+        Arrays.sort(faces);
+        int coins = 0, idx = faces.length - 1;
+
+        while (idx >= 0) {
+            while (money >= faces[idx]) {
+                money -= faces[idx];
+                coins++;
+            }
+            idx--;
+        }
+        System.out.println(coins);
+    }
+
+    static void coinChange2(Integer[] faces, int money) {
         // 从大到小排序
         Arrays.sort(faces, (o1, o2) -> o2 - o1);
 
