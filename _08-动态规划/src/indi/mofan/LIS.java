@@ -7,7 +7,27 @@ package indi.mofan;
 public class LIS {
     public static void main(String[] args) {
         int[] nums = new int[]{10, 2, 2, 5, 1, 7, 101, 18};
-        System.out.println(lengthOfLIS_1(nums));
+        System.out.println(lengthOfLIS(nums));
+    }
+
+    static int lengthOfLIS(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        int[] top = new int[nums.length];
+        int len = 0;
+        for (int num : nums) {
+            int begin = 0, end = len;
+            while (begin < end) {
+                int mid = (begin + end) >> 1;
+                if (num <= top[mid]) {
+                    end = mid;
+                } else {
+                    begin = mid + 1;
+                }
+            }
+            top[begin] = num;
+            if (begin == len) len++;
+        }
+        return len;
     }
 
     static int lengthOfLIS_1(int[] nums) {
