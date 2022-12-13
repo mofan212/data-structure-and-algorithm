@@ -2,7 +2,6 @@ package com.yang.set;
 
 import com.yang.list.LinkedList;
 import com.yang.list.List;
-import sun.text.resources.cldr.ti.FormatData_ti;
 
 /**
  * @author 默烦
