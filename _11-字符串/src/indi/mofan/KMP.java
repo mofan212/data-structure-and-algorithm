@@ -39,6 +39,29 @@ public class KMP {
         int i = 0, n = -1, iMax = chars.length - 1;
         while (i < iMax) {
             if (n < 0 || chars[i] == chars[n]) {
+                ++i;
+                ++n;
+
+                if (chars[i] == chars[n]) {
+                    next[i] = next[n];
+                } else {
+                    next[i] = n;
+                }
+            } else {
+                n = next[n];
+            }
+        }
+        return next;
+    }
+
+    private static int[] next2(String pattern) {
+        char[] chars = pattern.toCharArray();
+        int[] next = new int[chars.length];
+
+        next[0] = -1;
+        int i = 0, n = -1, iMax = chars.length - 1;
+        while (i < iMax) {
+            if (n < 0 || chars[i] == chars[n]) {
                 next[++i] = n++;
             } else {
                 n = next[n];
