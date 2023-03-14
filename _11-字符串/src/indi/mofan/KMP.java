@@ -62,7 +62,7 @@ public class KMP {
         int i = 0, n = -1, iMax = chars.length - 1;
         while (i < iMax) {
             if (n < 0 || chars[i] == chars[n]) {
-                next[++i] = n++;
+                next[++i] = ++n;
             } else {
                 n = next[n];
             }
