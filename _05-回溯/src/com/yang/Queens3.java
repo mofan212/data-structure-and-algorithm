@@ -10,15 +10,29 @@ public class Queens3 {
         new Queens3().placeQueens();
     }
 
-    // 数组索引是行号，数组元素是列号
+    /**
+     * 数组索引是行号，数组元素是列号
+     */
     int[] queens;
-    // 标记着某一列是否有皇后
+
+    /**
+     * 标记着某一列是否有皇后
+     */
     byte cols;
-    // 标记着某一对角线是否有皇后（左上角 --> 右下角）
+
+    /**
+     * 标记着某一对角线是否有皇后（左上角 --> 当前位置）
+     */
     short leftTop;
-    // 标记着某一对角线是否有皇后（右上角 --> 左下角）
+
+    /**
+     * 标记着某一对角线是否有皇后（右上角 --> 当前位置）
+     */
     short rightTop;
-    // 摆法
+
+    /**
+     * 摆法
+     */
     int ways;
 
     void placeQueens() {
@@ -67,7 +81,7 @@ public class Queens3 {
     void show() {
         for (int row = 0; row < 7; row++) {
             for (int col = 0; col < 7; col++) {
-                if (queens [row] == col) {
+                if (queens[row] == col) {
                     System.out.print("1 ");
                 } else {
                     System.out.print("0 ");
