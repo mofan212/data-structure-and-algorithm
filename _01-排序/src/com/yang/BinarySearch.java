@@ -79,7 +79,7 @@ public class BinarySearch {
         System.out.println(binarySearchTemplate(array, i -> i < 5, (l, r) -> l));
         // 第一个大于 5 的元素 --> 6
         System.out.println(binarySearchTemplate(array, i -> i <= 5, (l, r) -> r));
-        // 最后一个大于等于 5 的元素 --> 5
+        // 最后一个小于等于 5 的元素 --> 5
         System.out.println(binarySearchTemplate(array, i -> i <= 5, (l, r) -> l));
     }
 }
