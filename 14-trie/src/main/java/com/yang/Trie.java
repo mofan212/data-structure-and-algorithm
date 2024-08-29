@@ -113,7 +113,7 @@ public class Trie<V> {
     }
 
     private void keyCheck(String key) {
-        if (key == null || key.length() == 0) {
+        if (key == null || key.isEmpty()) {
             throw new IllegalArgumentException("key must not be empty");
         }
     }
