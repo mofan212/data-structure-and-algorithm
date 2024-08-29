@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>indi.mofan</groupId>
+    <artifactId>data-structure-and-algorithm</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>00-leetcode</module>
+        <module>01-complexity</module>
+        <module>02-dynamic-array</module>
+        <module>03-linked-list</module>
+        <module>04-stack</module>
+        <module>05-deque</module>
+        <module>06-bst</module>
+        <module>06-bst2</module>
+        <module>07-avl</module>
+        <module>08-red-black-tree</module>
+        <module>09-collection</module>
+        <module>10-map</module>
+        <module>11-hashmap</module>
+        <module>12-heap</module>
+        <module>13-priority-queue</module>
+        <module>14-trie</module>
+        <module>15-traverse-tree</module>
+        <module>_01-sort</module>
+        <module>_02-union-find</module>
+        <module>_03-graph</module>
+        <module>_04-recursion</module>
+        <module>_05-back-tracking</module>
+        <module>_06-greedy</module>
+        <module>_07-divide-and-conquer</module>
+        <module>_08-dp</module>
+        <module>_09-bloom-filter</module>
+        <module>_10-skip-list</module>
+        <module>_11-string</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.11.0</version>
+        </dependency>
+    </dependencies>
+    
+</project>
