@@ -38,7 +38,9 @@ public class ShellSort<E extends Comparable<E>> extends Sort<E> {
         }
     }
 
-    // 获取希尔本人给出的步长序列
+    /**
+     * 获取步长序列
+     */
     private List<Integer> shellStepSequence() {
         List<Integer> stepSequence = new ArrayList<>();
         int step = array.length;

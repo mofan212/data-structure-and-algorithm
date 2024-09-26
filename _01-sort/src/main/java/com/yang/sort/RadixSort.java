@@ -9,9 +9,9 @@ public class RadixSort extends Sort<Integer> {
     protected void sort() {
         // 找出待排序列中的最大值
         int max = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > max) {
-                max = array[i];
+        for (Integer integer : array) {
+            if (integer > max) {
+                max = integer;
             }
         }
 
@@ -30,8 +30,8 @@ public class RadixSort extends Sort<Integer> {
         // 开辟内存空间，存储次数
         int[] counts = new int[10];
         // 统计每个整数出现的次数
-        for (int i = 0; i < array.length; i++) {
-            counts[array[i] / divider % 10]++;
+        for (Integer integer : array) {
+            counts[integer / divider % 10]++;
         }
         // 累加次数
         for (int i = 1; i < counts.length; i++) {

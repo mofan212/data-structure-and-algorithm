@@ -14,10 +14,11 @@ public class QuickSort2<E extends Comparable<E>> extends Sort<E> {
 
     /**
      * 对 [begin, end) 范围的元素进行快速排序
+     *
      * @param begin 序列开始位置索引
-     * @param end 序列长度
+     * @param end   序列长度
      */
-    private void sort(int begin, int end){
+    private void sort(int begin, int end) {
         if (end - begin < 2) return;
         // 确定轴点位置
         int p = pivot(begin, end);
@@ -27,12 +28,13 @@ public class QuickSort2<E extends Comparable<E>> extends Sort<E> {
     }
 
     /**
-     *  构造出 [begin, end) 范围的轴点元素
+     * 构造出 [begin, end) 范围的轴点元素
+     *
      * @param begin 序列开始位置索引
-     * @param end 序列长度
+     * @param end   序列长度
      * @return 轴点元素的最终位置
      */
-    private int pivot(int begin, int end){
+    private int pivot(int begin, int end) {
         // 随机选择一个元素跟begin位置进行交换
         swap(begin, begin + (int) (Math.random() * (end - begin)));
 
@@ -40,9 +42,10 @@ public class QuickSort2<E extends Comparable<E>> extends Sort<E> {
         E pivot = array[begin];
         // end 指向最后一个元素
         end--;
-        while (begin < end){
-            while (begin < end){
-                if (cmp(pivot, array[end]) <= 0){ // 右边元素 > 轴点元素
+        while (begin < end) {
+            while (begin < end) {
+                // 添加了相等性判断
+                if (cmp(pivot, array[end]) <= 0) { // 右边元素 > 轴点元素
                     end--;
                 } else { // 右边元素 <= 轴点元素
                     array[begin++] = array[end];
@@ -51,8 +54,9 @@ public class QuickSort2<E extends Comparable<E>> extends Sort<E> {
                 }
             }
 
-            while (begin < end){
-                if (cmp(pivot, array[begin]) >= 0){ // 左边元素 < 轴点元素
+            while (begin < end) {
+                // 添加了相等性判断
+                if (cmp(pivot, array[begin]) >= 0) { // 左边元素 < 轴点元素
                     begin++;
                 } else { // 左边元素 >= 轴点元素
                     array[end--] = array[begin];
